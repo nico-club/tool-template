@@ -1,0 +1,15 @@
+{
+  "name": "nico-studio-area2-tool",
+  "version": "1.0.0",
+  "description": "NICO Studio エリア2 ツールテンプレート（入力→AI処理→出力）",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "express": "^4.19.0"
+  }
+}

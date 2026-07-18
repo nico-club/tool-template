@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>マイツール — NICO Studio エリア2</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 640px; margin: 40px auto; padding: 0 16px; }
+    textarea { width: 100%; height: 100px; }
+    button { padding: 8px 24px; font-size: 16px; cursor: pointer; }
+    #out { white-space: pre-wrap; background: #f4f4f4; padding: 12px; border-radius: 8px; min-height: 40px; }
+  </style>
+</head>
+<body>
+  <h1>🛠 マイツール</h1>
+  <p>NICO Studio エリア2 テンプレート。ここを自分のツールに作り替えよう。</p>
+  <textarea id="in" placeholder="入力を書く"></textarea>
+  <p><button onclick="run()">実行</button></p>
+  <div id="out"></div>
+  <script>
+    async function run() {
+      const r = await fetch("/api/run", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ input: document.getElementById("in").value }),
+      });
+      const d = await r.json();
+      document.getElementById("out").textContent = d.output;
+    }
+  </script>
+</body>
+</html>

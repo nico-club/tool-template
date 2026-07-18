@@ -1,0 +1,15 @@
+# 秘密情報は絶対にコミットしない（エリア2規約 §3）
+.env
+.env.*
+*.key
+*.pem
+credentials*.json
+service-account*.json
+token*.txt
+
+# 依存・生成物
+node_modules/
+dist/
+build/
+*.log
+.DS_Store

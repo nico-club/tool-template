@@ -1,0 +1,11 @@
+{
+  "name": "マイツール（ここに名前）",
+  "description": "何を入れると何が出るかを一行で書く",
+  "developer": "GitHubユーザー名 or 部員名",
+  "input": ["text"],
+  "output": ["text"],
+  "sdk": [],
+  "visibility": "url-limited",
+  "license": "MIT",
+  "version": "1.0.0"
+}
